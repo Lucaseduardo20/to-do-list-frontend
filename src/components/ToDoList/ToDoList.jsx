@@ -1,24 +1,24 @@
 import { useState } from "react";
-import { ChecklistContent, ChecklistContainer, ChecklistActions, TaskList, ModalButtons } from "./ChecklistStyles";
+import { ToDoContent, ToDoContainer, ToDoActions, TaskList, ModalButtons } from "./ToDoListStyles";
 import { TextField, MenuItem } from "@mui/material";
 import { ModalBar } from "../../utils/Modal";
 import '../../assets/fonts.css'
 
 
-export const Checklist = () => {
+export const ToDoList = () => {
     const [modal, setModal] = useState(false)
     return (
         <>
-            <ChecklistContainer>
-                <h1>CHECKLIST</h1>
-                <ChecklistContent>
-                    <ChecklistActions>
+            <ToDoContainer>
+                <h1>To-Do List</h1>
+                <ToDoContent>
+                    <ToDoActions>
                         <button onClick={() => setModal(true)}>NOVA TAREFA</button>
-                    </ChecklistActions>
+                    </ToDoActions>
                     <TaskList>
 
                     </TaskList>
-                </ChecklistContent>
+                </ToDoContent>
                 {modal &&
                     <ModalBar showModal={modal} setShowModal={setModal} width={600} height={600}>
                         <h2>NOVA TAREFA</h2>
@@ -70,7 +70,7 @@ export const Checklist = () => {
                         </ModalButtons>
                     </ModalBar >
                 }
-            </ChecklistContainer>
+            </ToDoContainer>
         </>
     )
 }

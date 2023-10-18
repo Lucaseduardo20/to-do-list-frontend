@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import { Checklist } from './components/Checklist/Checklist'
+import { ToDoList } from './components/ToDoList/ToDoList'
 
 function App() {
 
   return (
     <>
-      <Checklist />
+      <ToDoList />
     </>
   )
 }
